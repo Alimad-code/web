@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №2 — новостной блок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="news-panel" aria-labelledby="page-title">
+            <header class="panel-header">
+                <p class="eyebrow">MosPoly Formula Media Center</p>
+                <h1 id="page-title">Интерактивный блок новостей</h1>
+            </header>
+
+            <nav class="category-tabs" aria-label="Категории новостей">
+                <button class="category-button active" type="button" data-category="race">Гонка</button>
+                <button class="category-button" type="button" data-category="team">Команда</button>
+                <button class="category-button" type="button" data-category="tech">Техника</button>
+                <button class="category-button" type="button" data-category="season">Сезон</button>
+            </nav>
+
+            <section class="category-summary" aria-live="polite">
+                <div>
+                    <p class="summary-label">Текущая категория</p>
+                    <h2 id="category-title"></h2>
+                </div>
+            </section>
+
+            <section class="content-grid">
+                <article class="main-story">
+                    <p class="summary-label">Главная новость</p>
+                    <h3 id="main-story-title"></h3>
+                    <p id="main-story-text"></p>
+                    <div class="story-meta">
+                        <span id="main-story-time"></span>
+                        <span id="main-story-priority"></span>
+                    </div>
+                </article>
+
+                <aside class="stats-panel" aria-label="Статистика категории">
+                    <div>
+                        <span id="news-count">0</span>
+                        <p>материала</p>
+                    </div>
+                    <div>
+                        <span id="top-count">0</span>
+                        <p>топ-новости</p>
+                    </div>
+                </aside>
+            </section>
+
+            <section>
+                <div class="section-title">
+                    <h2>Лента материалов</h2>
+                </div>
+                <div id="news-list" class="news-list" aria-live="polite"></div>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.ts" type="text/javascript"></script>
+</body>
+</html>
